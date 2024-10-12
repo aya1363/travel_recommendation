@@ -1,0 +1,285 @@
+/* Global Styles */
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url('daniele-levis-pelusi-jTknOGI18us-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+/* Navigation Bar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(15, 12, 12, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#profile_name {
+    display: flex;
+    align-items: center;
+}
+
+#profile_name img {
+    margin-right: 10px;
+    width: 50px;
+}
+
+#profile_name span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9800;
+    letter-spacing: 2px;
+}
+
+.topmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.topmenu a {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    font-size: 18px;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.4s ease;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.topmenu a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ff9800;
+    transition: all 0.4s ease;
+}
+
+.topmenu a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.topmenu a:hover {
+    color: #ff9800;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+/* Center navigation links */
+.topmenu {
+    justify-content: center;
+}
+
+/* Search and Buttons */
+
+
+#Recommendation {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #ecf0f1;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+
+
+
+/* welcome  */
+.welcome {
+    background-color: #ffffff;
+    color: #2c3e50;
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome h3{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff9800;
+}
+
+.welcome p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.aboutus:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Social Media Section */
+#social-media {
+    color:whitesmoke;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 40px;
+    margin: 0 15px;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+    transform: scale(1.2);
+}
+
+/* Footer styles */
+/**.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Button Animation - Bounce Effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+button:hover {
+    animation: bounce 0.5s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .topmenu {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
+/* User Form Styles */
+#user-form {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#user-form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#user-form label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#user-form input[type="text"],
+#user-form input[type="email"],
+#user-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+#user-form input[type="text"]:focus,
+#user-form input[type="email"]:focus,
+#user-form textarea:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #ff9800;
+}
+
+#user-form input[type="text"]::placeholder,
+#user-form input[type="email"]::placeholder,
+#user-form textarea::placeholder {
+    font-style: italic;
+    color: #b0b0b0;
+}
+
+/* Submit Button Styles */
+#submit-btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%; /* Full-width button */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase; /* For styling consistency */
+}
+
+#submit-btn:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: bounce 0.5s ease-in-out infinite; /* Bounce effect */
+}
+
+/* Textarea Height */
+#user-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #user-form {
+        padding: 20px;
+    }
+
+    #user-form input[type="text"],
+    #user-form input[type="email"],
+    #user-form textarea {
+        padding: 10px;
+    }
+}

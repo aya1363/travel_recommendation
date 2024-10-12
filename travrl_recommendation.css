@@ -1,0 +1,274 @@
+/* Global Styles */
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url('daniele-levis-pelusi-jTknOGI18us-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Navigation Bar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#profile_name {
+    display: flex;
+    align-items: center;
+}
+
+#profile_name img {
+    margin-right: 10px;
+    width: 50px;
+}
+
+#profile_name span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9800;
+    letter-spacing: 2px;
+}
+
+.topmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.topmenu a {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    font-size: 18px;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.4s ease;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.topmenu a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ff9800;
+    transition: all 0.4s ease;
+}
+
+.topmenu a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.topmenu a:hover {
+    color: #ff9800;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+/* Center navigation links */
+.topmenu {
+    justify-content: center;
+}
+
+/* Search and Buttons */
+#searchbar {
+    margin-left: 20px;
+}
+
+#Recommendation {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #ecf0f1;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+#Recommendation:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+button:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#resetbtn {
+    background-color: #f44336;
+}
+
+#resetbtn:hover {
+    background-color: #d32f2f;
+}
+
+#bookbtn {
+    display: block;
+    margin: 20px auto;
+    background-color: #e53408;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+#bookbtn:hover {
+    background-color: #deab20;
+    transform: scale(1.1);
+}
+
+/* Info Container */
+#info_container {
+    background-color: #ffffff;
+    color: #2c3e50;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#info_container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff9800;
+}
+
+#info_container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+#info_container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Social Media Section */
+#social-media {
+    color:whitesmoke;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 40px;
+    margin: 0 15px;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+    transform: scale(1.2);
+}
+
+/* Footer styles */
+/**.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Button Animation - Bounce Effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+button:hover {
+    animation: bounce 0.5s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .topmenu {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    button, #Recommendation {
+        margin: 10px 0;
+    }
+}
+#recommendations {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.country-item, .temple-item, .beach-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.recommendation-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #2c3e50;
+}
+
